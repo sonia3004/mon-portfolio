@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+#diplomas {
+  max-width: 87.5vw; 
+  margin: 0 auto; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 5rem; 
+  padding-bottom: 5rem; 
+  background-color: #111 !important;
+  font-family: "Nunito", sans-serif; 
+}
+
+
+#diplomas > .diplomas-content {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+/*  Style du titre */
+.diplomas-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+/*Style du Swiper */
+.swiper {
+  width: 160px !important;
+  height: 180px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Taille des cartes avec effet Swiper */
+.swiper-slide {
+  width: 200px !important;
+  height: 200px !important;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/*  Image dans Swiper */
+.swiper-slide img {
+  width: 80%;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (min-width: 769px) {
+  .diploma-selected {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px; 
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+.scrollbar-white::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-white::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.scrollbar-white::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🎨 Glassmorphism */
+.diplomas-glass {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  overflow: visible;
+  z-index: 1;
+}
+
+
+.diplomas-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(120px);
+  opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+  .diplomas-glass {
+    padding: 1rem;
+  }
+
+  .blur-effect {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: backdrop-filter 0.3s ease-in-out;
+  }
+
+  .diplomas-blur-active {
+    backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.3s ease-in-out;
+  }
+
+  .diploma-selected {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0; 
+    transition: backdrop-filter 0.3s ease-in-out;
+  }
+
+  .diploma-selected:hover {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0; 
+  }
+}

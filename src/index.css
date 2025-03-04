@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  background-color: #000000 !important;
+  overflow-x: hidden;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0);
+  height: 855px;
+}
+
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+.btn-custom {
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  background: #C0C0C0;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  background: rgba(0,0,0, 0.9);
+  transform: scale(1.05);
+  text-shadow: none;
+}
+
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.gallery-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+}
+
+
+.gallery-thumbnail:hover span {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.gallery-thumbnail {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.gallery-thumbnail:hover {
+  transform: scale(1.2);
+}
+
+
+#skills {
+  max-width: 87.5vw;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #111 !important; 
+}
+
+
+#skills > div {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+#skills > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+
+  .gallery-wrapper {
+    height: 400px; 
+  }
+
+
+  .gallery-wrapper {
+    margin-bottom: 0; 
+  }
+}
